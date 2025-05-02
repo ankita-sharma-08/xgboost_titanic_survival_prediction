@@ -14,7 +14,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsgbkLYgbTGcmkjiB7LgVRCMmdO_xcTkWAOg&s');
+        background-image: url('https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4086440/cover_image/retina_1708x683/cover-color-psychology-03b7cbed78d0c396891bd10a9b1b855f.png');
         background-size: cover;
         background-position: center;
     }
@@ -23,14 +23,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Personal Details Section
-st.sidebar.header("Personal Details")
-name = st.sidebar.text_input("Name")
-age = st.sidebar.number_input("Age", min_value=0, max_value=120, value=25)
-email = st.sidebar.text_input("Email")
 
 # Input features
-st.header("Input Features")
+st.header("Enter the Details")
 feature1 = st.number_input("Feature 1", min_value=0.0, max_value=100.0, value=50.0)
 feature2 = st.number_input("Feature 2", min_value=0.0, max_value=100.0, value=50.0)
 feature3 = st.number_input("Feature 3", min_value=0.0, max_value=100.0, value=50.0)
@@ -38,14 +33,35 @@ feature3 = st.number_input("Feature 3", min_value=0.0, max_value=100.0, value=50
 # Create a button for prediction
 if st.button("Predict"):
     # Prepare the input data for prediction
-    input_data = np.array([[feature1, feature2, feature3]])
+    data = np.array([[feature1, feature2, feature3]])
     
     # Make prediction
-    prediction = model.predict(input_data)
+    prediction = model.predict(data)
     
     # Display the prediction
     st.success(f"The predicted value is: {prediction[0]}")
 
-# Display personal details
-if st.sidebar.button("Submit"):
-    st.sidebar.success(f"Details Submitted: {name}, Age: {age}, Email: {email}")
+
+
+
+# Footer with name and email - shows on bottom of the app
+footer_html = f"""
+    <style>
+        .footer {{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            z-index: 9999;
+        }}
+    </style>
+    <div class="footer">
+        Developed by {name if name else 'Ankita Sharma'} | Email: {email if email else 'ankitasharma7820@gmail.com'}
+    </div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
