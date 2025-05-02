@@ -13,7 +13,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/fall-nature-background-with-leaves-free-image.jpeg?w=600&quality=80');
+        background-image: url('https://cdn.pixabay.com/photo/2022/01/27/17/51/titanic-6972725_1280.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -67,25 +67,7 @@ if st.button("Predict"):
         st.error("The passenger is predicted not to survive.")
 
 
-
-# Footer with name and email - shows on bottom of the app
-footer_html = f"""
-    <style>
-        .footer {{
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            z-index: 9999;
-        }}
-    </style>
-    <div class="footer">
-        Developed by {name if name else 'Ankita Sharma'} | Email: {email if email else 'ankitasharma7820@gmail.com'}
-    </div>
-"""
-st.markdown(footer_html, unsafe_allow_html=True)
+# Footer
+st.markdown("---")  # Horizontal line
+st.markdown("### Developed by: Ankita Sharma")
+st.markdown("### Email: ankitasharma7820@gmail.com")
