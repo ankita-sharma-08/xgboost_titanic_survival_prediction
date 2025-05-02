@@ -16,6 +16,7 @@ st.markdown(
         background-image: url('https://cdn.pixabay.com/photo/2022/01/27/17/51/titanic-6972725_1280.jpg');
         background-size: cover;
         background-position: center;
+        color: white;
     }
     </style>
     """,
@@ -28,7 +29,7 @@ st.markdown(
     """
     <style>
     .sidebar .sidebar-content {
-        background-image: url('https://static.vecteezy.com/system/resources/previews/006/965/779/non_2x/empty-top-wooden-table-and-sakura-flower-with-fog-and-morning-light-background-photo.jpg');  /* Replace with your image path or URL */
+        background-image: url('https://img.freepik.com/premium-photo/collision-prediction-algorithms-prevention-solid-color-background_964851-134435.jpg?w=360');  /* Replace with your image path or URL */
         background-size: cover;
         background-position: center;
         color: white;  /* Change text color for better visibility */
