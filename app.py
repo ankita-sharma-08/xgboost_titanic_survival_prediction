@@ -62,12 +62,12 @@ embarked = st.selectbox("Embarked", ['C', 'Q', 'S'])
 if st.button("Predict"):
     result = predict_survival(pclass, sex, age, sibsp, parch, fare, embarked)
     if result == 1:
-        st.success("The passenger is predicted to survive.")
+        st.markdown("<h3 style='color: white;'>The passenger is predicted to survive.</h3>", unsafe_allow_html=True)
     else:
-        st.error("The passenger is predicted not to survive.")
+        st.markdown("<h3 style='color: red;'>The passenger is predicted not to survive.</h3>", unsafe_allow_html=True)
 
 
 # Footer
 st.markdown("---")  # Horizontal line
-st.markdown("### Developed by: Ankita Sharma")
-st.markdown("### Email: ankitasharma7820@gmail.com")
+st.markdown("<h3 style='color: white;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='color: white;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True)
