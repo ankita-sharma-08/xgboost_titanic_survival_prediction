@@ -24,24 +24,6 @@ st.markdown(
 )
 
 
-# Sidebar background image
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK51RbG64lALXRSVoZELCwDUDKEJFO0Af_ng&s');  /* Replace with your image path or URL */
-        background-size: cover;
-        background-position: center;
-        color: white;  /* Change text color for better visibility */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-# Side Bar
-st.sidebar.markdown("<h3 style='color: black;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True)
-st.sidebar.markdown("<h3 style='color: black;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True)
-
 # Function to make predictions
 def predict_survival(pclass, sex, age, sibsp, parch, fare, embarked):
     # Prepare the input data
@@ -87,3 +69,9 @@ if st.button("Predict"):
         st.markdown("<h3 style='color: red;'> 🔴 The passenger is predicted not to survive !!.</h3>", unsafe_allow_html=True)
 
 
+
+st.markdown("------------") # Horizontal line 
+st.markdown("<h3 style='color: white;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True) 
+st.markdown("<h3 style='color: white;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True
+
+            
