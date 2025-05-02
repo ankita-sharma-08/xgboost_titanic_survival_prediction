@@ -72,6 +72,6 @@ if st.button("Predict"):
 
 st.markdown("------------") # Horizontal line 
 st.markdown("<h3 style='color: white;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True) 
-st.markdown("<h3 style='color: white;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True
+st.markdown("<h3 style='color: white;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True)
 
             
