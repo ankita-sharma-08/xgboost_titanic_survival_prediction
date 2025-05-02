@@ -7,6 +7,20 @@ import pickle
 # Load the saved model
 with open("xgboost.pkl", "rb") as f:
     model = pickle.load(f)
+    
+# Set background image
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/fall-nature-background-with-leaves-free-image.jpeg?w=600&quality=80');
+        background-size: cover;
+        background-position: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Function to make predictions
 def predict_survival(pclass, sex, age, sibsp, parch, fare, embarked):
@@ -51,3 +65,27 @@ if st.button("Predict"):
         st.success("The passenger is predicted to survive.")
     else:
         st.error("The passenger is predicted not to survive.")
+
+
+
+# Footer with name and email - shows on bottom of the app
+footer_html = f"""
+    <style>
+        .footer {{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            z-index: 9999;
+        }}
+    </style>
+    <div class="footer">
+        Developed by {name if name else 'Ankita Sharma'} | Email: {email if email else 'ankitasharma7820@gmail.com'}
+    </div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
