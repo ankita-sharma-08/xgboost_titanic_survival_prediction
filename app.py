@@ -22,6 +22,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Side Bar
+st.sidebar.markdown("<h3 style='color: black;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True)
+st.sidebar.markdown("<h3 style='color: black;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True)
+
 # Function to make predictions
 def predict_survival(pclass, sex, age, sibsp, parch, fare, embarked):
     # Prepare the input data
@@ -62,12 +66,8 @@ embarked = st.selectbox("Embarked", ['C', 'Q', 'S'])
 if st.button("Predict"):
     result = predict_survival(pclass, sex, age, sibsp, parch, fare, embarked)
     if result == 1:
-        st.markdown("<h3 style='color: white;'>The passenger is predicted to survive.</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='color: green;'> 🟢 The passenger is predicted to survive !!.</h3>", unsafe_allow_html=True)
     else:
-        st.markdown("<h3 style='color: red;'>The passenger is predicted not to survive.</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='color: red;'> 🔴 The passenger is predicted not to survive !!.</h3>", unsafe_allow_html=True)
 
 
-# Footer
-st.markdown("---")  # Horizontal line
-st.markdown("<h3 style='color: white;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True)
-st.markdown("<h3 style='color: white;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True)
