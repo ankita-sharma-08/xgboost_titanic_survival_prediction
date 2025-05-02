@@ -2,17 +2,9 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Load the XGBoost model from the pickle file
-model_file = 'MultipleFiles/xgboost.pkl'
-
-# Function to load the model
-def load_model():
-    with open(model_file, 'rb') as file:
-        model = pickle.load(file)
-    return model
-
 # Load the model
-model = load_model()
+with open('xgboost.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 # Streamlit app title
 st.title("XGBoost Model Prediction App")
