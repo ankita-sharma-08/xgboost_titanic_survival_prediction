@@ -22,6 +22,21 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
+# Sidebar background image
+st.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/006/965/779/non_2x/empty-top-wooden-table-and-sakura-flower-with-fog-and-morning-light-background-photo.jpg');  /* Replace with your image path or URL */
+        background-size: cover;
+        background-position: center;
+        color: white;  /* Change text color for better visibility */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Side Bar
 st.sidebar.markdown("<h3 style='color: black;'>Developed by: Ankita Sharma</h3>", unsafe_allow_html=True)
 st.sidebar.markdown("<h3 style='color: black;'>Email: ankitasharma7820@gmail.com</h3>", unsafe_allow_html=True)
