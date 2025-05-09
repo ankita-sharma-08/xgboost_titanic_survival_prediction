@@ -18,23 +18,23 @@ Objectives
 5. Model Persistence: Save the trained model for future use.
 
 # Steps Involved
-## 1. Environment Setup:
+### 1. Environment Setup:
 
 Install the necessary libraries, including pymysql, pandas, xgboost, sklearn, and seaborn.
 
-2.Database Connection:
+### 2.Database Connection:
 
 Establish a connection to a MySQL database using pymysql.
 
 Load the Titanic dataset into a Pandas DataFrame using SQL queries.
 
-3. Data Exploration:
+### 3. Data Exploration:
 
 Display the first few rows of the dataset to understand its structure.
 
 Check for null values in the dataset and print the count of missing values per column.
 
-4. Data Preprocessing:
+### 4. Data Preprocessing:
 
 Use LabelEncoder to convert categorical variables (sex and embarked) into numerical format.
 
@@ -42,7 +42,7 @@ Select relevant features for the model: pclass, sex, age, sibsp, parch, fare, an
 
 Split the dataset into training and testing sets using train_test_split.
 
-5. Model Training:
+### 5. Model Training:
 
 Convert the training and testing sets into XGBoost's DMatrix format, which efficiently handles missing values.
 
@@ -50,19 +50,19 @@ Define the parameters for the XGBoost model, including the objective function, e
 
 Train the model using the training data, with early stopping to prevent overfitting.
 
-6. Model Prediction:
+### 6. Model Prediction:
 
 Use the trained model to predict survival probabilities on the test set.
 
 Convert probabilities to binary predictions (0 or 1) based on a threshold of 0.5.
 
-7. Model Evaluation:
+### 7. Model Evaluation:
 
 Calculate and print the accuracy of the model.
 
 Generate and display a classification report that includes precision, recall, and F1-score.
 
-8. Model Saving:
+### 8. Model Saving:
 
 Save the trained model to a file (xgboost.pkl) using the pickle library for future use.
 
