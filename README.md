@@ -18,7 +18,7 @@ Objectives
 5. Model Persistence: Save the trained model for future use.
 
 # Steps Involved
-1. Environment Setup:
+## 1. Environment Setup:
 
 Install the necessary libraries, including pymysql, pandas, xgboost, sklearn, and seaborn.
 
