@@ -35,8 +35,8 @@ This is a **Streamlit web application** that predicts the survival of a passenge
 ### 1. Clone or Download the Project
 
 ```bash
-git clone https://github.com/yourusername/titanic-survival-predictor.git
-cd titanic-survival-predictor
+git clone https://github.com/ankita-sharma-08/xgboost_titanic_survival_prediction.git
+cd xgboost_titanic_survival_prediction
 ```
 
 ### 2. Install Dependencies
