@@ -77,7 +77,6 @@ st.markdown("<div style='text-align: right;'><h4 style='color: white;'>Email: an
 # # Disclaimer message
 st.markdown("------------")
 disclaimer = "This prediction is based on a machine learning model and may not be accurate."
-       
-       return jsonify({'survived': y_pred[0], 'disclaimer': disclaimer})
+return jsonify({'survived': y_pred[0], 'disclaimer': disclaimer})
 
             
