@@ -74,4 +74,10 @@ st.markdown("------------") # Horizontal line
 st.markdown("<div style='text-align: right;'><h4 style='color: white;'>Developed by: Ankita Sharma</h4>", unsafe_allow_html=True) 
 st.markdown("<div style='text-align: right;'><h4 style='color: white;'>Email: ankitasharma7820@gmail.com</h4>", unsafe_allow_html=True)
 
+# # Disclaimer message
+st.markdown("------------")
+disclaimer = "This prediction is based on a machine learning model and may not be accurate."
+       
+       return jsonify({'survived': y_pred[0], 'disclaimer': disclaimer})
+
             
